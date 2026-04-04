@@ -771,6 +771,76 @@ blockquote {
 }
 
 /* ===================================================
+   PROTECTION DES IMAGES
+   =================================================== */
+
+/* Couche transparente sur toutes les images — bloque le drag et le clic droit direct */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none; /* les clics passent au conteneur, pas à l'img */
+}
+
+/* On réactive pointer-events sur les conteneurs cliquables */
+.gallery__item,
+.about__img-wrap,
+.coach__visual,
+.nav__logo,
+a img {
+  pointer-events: auto;
+}
+
+/* Overlay invisible sur chaque image de galerie */
+.gallery__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: default;
+}
+
+/* Watermark © discret sur la galerie */
+.gallery__item::before {
+  content: '© BasketBall Player Camp';
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  z-index: 3;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Watermark sur la photo coach */
+.coach__visual {
+  position: relative;
+}
+.coach__visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: var(--radius);
+}
+.coach__visual::before {
+  content: '© BasketBall Player Camp';
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  z-index: 3;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+/* ===================================================
    FORM FEEDBACK
    =================================================== */
 .form__feedback {

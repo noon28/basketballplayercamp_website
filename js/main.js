@@ -109,6 +109,44 @@ function animateCounter(el, start, end, duration) {
   requestAnimationFrame(update);
 }
 
+// ===================================================
+// PROTECTION DES IMAGES
+// ===================================================
+
+(function protectImages() {
+  // 1. Bloquer le clic droit sur toutes les images
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG' || e.target.closest('.gallery__item, .about__img-wrap, .coach__visual')) {
+      e.preventDefault();
+    }
+  });
+
+  // 2. Bloquer le glisser-déposer des images
+  document.addEventListener('dragstart', (e) => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+
+  // 3. Bloquer Ctrl/Cmd+S (enregistrer la page) et Ctrl/Cmd+U (voir le source)
+  document.addEventListener('keydown', (e) => {
+    const isMac = navigator.platform.toUpperCase().includes('MAC');
+    const mod   = isMac ? e.metaKey : e.ctrlKey;
+    if (mod && (e.key === 's' || e.key === 'S' || e.key === 'u' || e.key === 'U')) {
+      e.preventDefault();
+    }
+  });
+
+  // 4. Désactiver la sélection de texte/images par clic long (mobile)
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('selectstart', (e) => e.preventDefault());
+    // Clic long mobile (callout menu iOS/Android)
+    img.style.webkitTouchCallout = 'none';
+    img.style.userSelect = 'none';
+  });
+})();
+
 // --- Gallery: lightbox placeholder ---
 document.querySelectorAll('.gallery__item').forEach(item => {
   item.addEventListener('click', () => {
