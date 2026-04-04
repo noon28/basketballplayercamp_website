@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BasketBall Player Camp — France</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Cloudflare Turnstile CAPTCHA -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">🏀</span>
+        <span class="nav__logo-text">BBALL PLAYER</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">Le Camp</a></li>
+        <li><a href="#features">Programme</a></li>
+        <li><a href="#gallery">Photos</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#register" class="nav__cta">Réserver</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img src="images/hero.jpg" alt="Joueur de basket en dunk" class="hero__bg-img" />
+      <div class="hero__bg-overlay"></div>
+      <div class="hero__court-lines"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">BasketBall Player Camp — France 2025</p>
+      <h1 class="hero__title">
+        ÉLÈVE TON<br />
+        <span class="hero__title--accent">NIVEAU</span><br />
+        DE JEU.
+      </h1>
+      <p class="hero__subtitle">
+        Machines à shoot, entraînements intensifs &amp; coaching d'un joueur professionnel.
+        Une expérience unique pour progresser vite.
+      </p>
+      <div class="hero__actions">
+        <a href="#register" class="btn btn--primary">Je m'inscris</a>
+        <a href="#features" class="btn btn--ghost">Découvrir le programme</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stats__item">
+        <span class="stats__number">5</span>
+        <span class="stats__label">Jours d'immersion</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">3</span>
+        <span class="stats__label">Machines à shoot</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">1</span>
+        <span class="stats__label">Joueur Pro</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">∞</span>
+        <span class="stats__label">Tirs à prendre</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual">
+          <div class="about__img-wrap">
+            <img src="images/about.jpg" alt="Ballons de basket Spalding" class="about__img" />
+            <div class="about__badge">
+              <strong>CAMP</strong>
+              <span>ELITE</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__eyebrow">À propos</p>
+          <h2 class="section__title">Pas juste un camp.<br />Une <span class="text--accent">transformation.</span></h2>
+          <p class="about__desc">
+            Ce camp a été pensé pour les joueurs qui veulent vraiment progresser.
+            Que tu démarres ou que tu joues déjà en compétition, notre programme
+            intensif t'amène au niveau supérieur.
+          </p>
+          <p class="about__desc">
+            Tu travailleras directement avec un joueur professionnel qui partage
+            ses secrets, ses routines et son regard expert sur le jeu moderne.
+          </p>
+          <ul class="about__list">
+            <li>Petits groupes pour un coaching personnalisé</li>
+            <li>Vidéo analyse de ton shoot</li>
+            <li>Accès illimité aux machines à shoot</li>
+            <li>Sessions matin &amp; après-midi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Programme</p>
+        <h2 class="section__title">Ce qui t'attend <span class="text--accent">au camp</span></h2>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🤖</div>
+          <h3 class="feature-card__title">Machines à Shoot</h3>
+          <p class="feature-card__desc">
+            Nos machines à shoot dernier cri te renvoient le ballon en continu.
+            Des centaines de tirs par session pour automatiser ta gestuelle.
+          </p>
+          <div class="feature-card__tag">Technologie</div>
+        </div>
+
+        <div class="feature-card feature-card--accent">
+          <div class="feature-card__icon">🏀</div>
+          <h3 class="feature-card__title">Entraînement de Tir</h3>
+          <p class="feature-card__desc">
+            Travail en profondeur de la mécanique de tir : pieds, posture,
+            relâché, arc. Des drills progressifs pour bâtir un shoot solide.
+          </p>
+          <div class="feature-card__tag">Technique</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">⭐</div>
+          <h3 class="feature-card__title">Coaching Pro</h3>
+          <p class="feature-card__desc">
+            Un joueur professionnel partage sa vision du jeu, ses habitudes
+            d'entraînement et répond à tes questions en direct.
+          </p>
+          <div class="feature-card__tag">Expertise</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📹</div>
+          <h3 class="feature-card__title">Vidéo Analyse</h3>
+          <p class="feature-card__desc">
+            Tes shoots sont filmés et analysés image par image.
+            Tu repars avec un feedback précis et un plan de progression.
+          </p>
+          <div class="feature-card__tag">Analyse</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">💪</div>
+          <h3 class="feature-card__title">Physique &amp; Athlétisme</h3>
+          <p class="feature-card__desc">
+            Explosivité, endurance et mobilité spécifiques au basket.
+            Des séances adaptées pour améliorer tes capacités physiques.
+          </p>
+          <div class="feature-card__tag">Préparation</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🏆</div>
+          <h3 class="feature-card__title">Tournoi Final</h3>
+          <p class="feature-card__desc">
+            La dernière journée est dédiée à la compétition interne.
+            Mets en pratique tout ce que tu as appris en situation de jeu réelle.
+          </p>
+          <div class="feature-card__tag">Compétition</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Ambiance</p>
+        <h2 class="section__title">Le camp <span class="text--accent">en images</span></h2>
+      </div>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--tall">
+        <img src="images/gallery-1.jpg" alt="Joueur en dunk lors d'un match" class="gallery__img" />
+      </div>
+      <div class="gallery__item">
+        <img src="images/gallery-2.jpg" alt="Ballon sur un parquet de salle" class="gallery__img" />
+      </div>
+      <div class="gallery__item">
+        <img src="images/gallery-3.jpg" alt="Ballon de basket sur terrain extérieur" class="gallery__img" />
+      </div>
+      <div class="gallery__item gallery__item--wide">
+        <img src="images/gallery-4.jpg" alt="Arène de basketball pleine de spectateurs" class="gallery__img" />
+      </div>
+      <div class="gallery__item">
+        <img src="images/gallery-5.jpg" alt="Ballon rentrant dans le panier" class="gallery__img" />
+      </div>
+      <div class="gallery__item">
+        <img src="images/gallery-6.jpg" alt="Action de jeu basketball" class="gallery__img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram" id="instagram">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Suivez-nous</p>
+        <h2 class="section__title">Nos dernières <span class="text--accent">actu</span></h2>
+        <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="instagram__handle">
+          <span class="instagram__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </span>
+          @basketball_player_camp
+        </a>
+      </div>
+
+      <!--
+        BEHOLD.SO WIDGET
+        1. Crée un compte gratuit sur behold.so
+        2. Connecte ton compte Instagram
+        3. Copie ton Feed ID et remplace VOTRE_FEED_ID ci-dessous
+        4. Décommente la ligne script
+      -->
+      <div id="behold-widget-VOTRE_FEED_ID" class="instagram__feed"></div>
+      <!-- <script src="https://w.behold.so/widget.js" type="module"></script> -->
+
+      <!-- Placeholder affiché tant que Behold n'est pas configuré -->
+      <div class="instagram__placeholder" id="igPlaceholder">
+        <div class="ig-placeholder-grid">
+          <div class="ig-placeholder-item"><span>📸</span></div>
+          <div class="ig-placeholder-item"><span>🏀</span></div>
+          <div class="ig-placeholder-item"><span>📸</span></div>
+          <div class="ig-placeholder-item"><span>🏆</span></div>
+          <div class="ig-placeholder-item"><span>📸</span></div>
+          <div class="ig-placeholder-item"><span>💪</span></div>
+        </div>
+        <p class="ig-placeholder-note">
+          Connecte ton compte Instagram via <a href="https://behold.so" target="_blank" rel="noopener">behold.so</a> pour afficher tes vraies publications ici.
+        </p>
+      </div>
+
+      <div class="instagram__cta">
+        <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="btn btn--ghost">
+          Voir tous les posts sur Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACH CTA -->
+  <section class="coach">
+    <div class="container">
+      <div class="coach__inner">
+        <div class="coach__quote">
+          <div class="coach__quote-mark">"</div>
+          <blockquote>
+            Ce camp, c'est l'opportunité que j'aurais voulu avoir à vos âges.
+            Chaque drill, chaque répétition vous rapproche du joueur que vous
+            voulez devenir.
+          </blockquote>
+          <div class="coach__author">
+            <div class="coach__author-img">
+              <img src="images/coach.jpg" alt="Hugo Bequignon" />
+            </div>
+            <div>
+              <strong>Hugo Bequignon</strong>
+              <span>Joueur Pro — Élite 2 — ASA Alsace</span>
+            </div>
+          </div>
+        </div>
+        <div class="coach__visual">
+          <img src="images/coach.jpg" alt="Joueur professionnel de basketball" class="coach__img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section class="register" id="register">
+    <div class="container">
+      <div class="register__inner">
+        <div class="register__text">
+          <p class="section__eyebrow">Réservation</p>
+          <h2 class="section__title">Prêt à passer<br />au <span class="text--accent">niveau sup ?</span></h2>
+          <p class="register__desc">
+            Les places sont limitées pour garantir un coaching de qualité.
+            Laisse-nous ton contact et on revient vers toi avec toutes les infos.
+          </p>
+          <ul class="register__perks">
+            <li>✓ Places limitées — inscription tôt conseillée</li>
+            <li>✓ Réponse sous 48h</li>
+            <li>✓ Tarif Early Bird disponible</li>
+          </ul>
+        </div>
+        <form class="register__form" id="registerForm">
+          <div class="form__group">
+            <label for="name">Prénom &amp; Nom</label>
+            <input type="text" id="name" name="name" placeholder="Jordan Martin" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jordan@email.com" required />
+          </div>
+          <div class="form__group">
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" placeholder="16" min="10" max="30" required />
+          </div>
+          <div class="form__group">
+            <label for="level">Niveau</label>
+            <select id="level" name="level">
+              <option value="">Sélectionner...</option>
+              <option>Débutant</option>
+              <option>Intermédiaire</option>
+              <option>Compétition</option>
+              <option>Semi-pro</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Des questions sur le camp ?"></textarea>
+          </div>
+          <!-- Cloudflare Turnstile -->
+          <!-- CLÉ DE TEST (toujours valide) — remplace par ta vraie clé en prod -->
+          <div class="cf-turnstile"
+               data-sitekey="1x00000000000000000000AA"
+               data-theme="dark"
+               data-language="fr"></div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            Envoyer ma demande 🏀
+          </button>
+          <div class="form__feedback" id="formFeedback" aria-live="polite"></div>
+          <p class="form__note">Pas de spam. On te contacte uniquement pour le camp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-icon">🏀</span>
+            <span class="nav__logo-text">BBALL PLAYER</span>
+          </a>
+          <p>BasketBall Player Camp — Le camp qui change la donne.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#about">Le Camp</a>
+          <a href="#features">Programme</a>
+          <a href="#gallery">Photos</a>
+          <a href="#register">Réserver</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
+          <a href="#" class="social-btn" aria-label="TikTok">TK</a>
+          <a href="#" class="social-btn" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 BasketBall Player Camp. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
