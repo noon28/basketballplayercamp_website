@@ -6,10 +6,17 @@ Site web de promotion et d'inscription pour le **BasketBall Player Camp**, camp 
 
 ## Aperçu
 
-Le camp propose :
+Camp de basket en France, organisé en association par **Pierre Augustin** (coach diplômé) et **Hugo Bequignon** (joueur pro Élite 2 — ASA Alsace), avec équipement Nike.
+
+### 3 formules
+- **Stage été** — 1 semaine ou 2 semaines (9h–17h)
+- **Stage vacances** — en partenariat avec CBC (Compétences Basketball Camp)
+- **Perfectionnement tir** — à venir
+
+### Ce que propose le camp
 - Machines à shoot dernière génération
 - Entraînements de tir intensifs
-- Coaching direct avec **Hugo Bequignon** (Élite 2 — ASA Alsace)
+- Coaching direct avec un joueur professionnel
 - Vidéo analyse, préparation physique, tournoi final
 
 ---
@@ -104,6 +111,13 @@ Puis ajouter les variables d'environnement dans le dashboard Vercel :
 
 ---
 
+## Branches git
+
+| Branche | Description |
+|---------|-------------|
+| `main` | V1 initiale — mockup de base |
+| `v2-concept` | V2 active — contenu réel, 2 fondateurs, 3 formules, partenaires |
+
 ## Structure des fichiers
 
 ```
@@ -119,7 +133,12 @@ basketballplayercamp_website/
 │   ├── hero.jpg            # Photo hero
 │   ├── about.jpg           # Section about
 │   ├── coach.jpg           # Hugo Bequignon
-│   └── gallery-*.jpg       # Galerie (6 photos)
+│   ├── pierre-augustin.jpg # Pierre Augustin (B&W via CSS)
+│   ├── gallery-*.jpg       # Galerie (6 photos)
+│   └── logo/
+│       ├── LogoCouleurBasket.jpg   # Logo principal (nav + favicon)
+│       ├── partner-jt-immo.jpeg    # Partenaire JT Immo
+│       └── partner-art-sucre.png   # Partenaire Art Sucré
 ├── Dockerfile              # Image nginx:alpine
 ├── docker-compose.yml      # Dev local Docker
 ├── nginx.conf              # Config nginx
@@ -140,6 +159,15 @@ http://localhost:3000?demo
 ```
 
 Utile pour enregistrer une vidéo de présentation avec QuickTime (`⌘ Shift 5`).
+
+---
+
+## Visualisation gratuite via GitHub Pages
+
+Activer dans **Settings → Pages → sélectionner la branche `v2-concept`**.  
+URL générée : `https://noon28.github.io/basketballplayercamp_website/`
+
+> ⚠️ GitHub Pages = frontend uniquement. Le formulaire d'inscription nécessite Vercel (`vercel --prod`).
 
 ---
 
