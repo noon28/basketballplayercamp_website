@@ -140,6 +140,10 @@
   box-shadow: 0 0 60px rgba(255,107,0,0.2);
   opacity: 0.85;
 }
+.formule-logo__img--white {
+  background: #fff;
+  padding: 8px;
+}
 
 /* --- Section spacing --- */
 .formule-section {
