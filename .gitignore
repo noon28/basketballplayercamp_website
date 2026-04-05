@@ -1,7 +1,4 @@
-.env
-node_modules/
 .DS_Store
-.vercel/
 .claude/
 
 # Config PHP avec les clés secrètes — ne jamais commit

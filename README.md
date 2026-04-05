@@ -26,62 +26,92 @@ Camp de basket en France, organisé en association par **Pierre Augustin** (coac
 | Couche | Technologie |
 |--------|-------------|
 | Frontend | HTML5 / CSS3 / JavaScript vanilla |
-| Hébergement | [Vercel](https://vercel.com) (gratuit) |
+| Hébergement | [OVH mutualisé Starter](https://www.ovhcloud.com/fr/web-hosting/) |
+| Backend | PHP 8+ (Apache + cURL) |
 | Emails | [Resend](https://resend.com) (3 000 emails/mois gratuit) |
 | CAPTCHA | [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) (gratuit) |
 | Feed Instagram | [Behold.so](https://behold.so) (gratuit) |
-| Docker | nginx:alpine (optionnel) |
+
+---
+
+## Structure des fichiers
+
+```
+basketballplayercamp_website/
+├── index.html              # Page principale
+├── formule-ete.html        # Page dédiée stage été
+├── formule-vacances.html   # Page dédiée stage vacances
+├── formule-tir.html        # Page dédiée perfectionnement tir
+├── .htaccess               # Sécurité OVH (HTTPS forcé, cache, headers)
+├── css/
+│   ├── style.css           # Styles (dark theme, responsive)
+│   └── formules.css        # Styles des pages formules
+├── js/
+│   └── main.js             # Interactions, formulaire
+├── api/
+│   ├── .htaccess           # Rewrite /api/register → register.php + protection config
+│   ├── register.php        # Handler formulaire (PHP 8, Resend via cURL)
+│   ├── config.php          # Clés secrètes — dans .gitignore, ne jamais commit
+│   └── config.example.php  # Template config à copier
+└── images/
+    ├── hero.jpg
+    ├── about.jpg
+    ├── coach.jpg           # Hugo Bequignon
+    ├── pierre-augustin.jpg # Pierre Augustin (B&W via CSS)
+    ├── gallery-*.jpg       # Galerie (6 photos)
+    └── logo/
+        ├── LogoCouleurBasket.jpg   # Logo principal (nav + favicon)
+        ├── partner-jt-immo.jpeg    # Partenaire JT Immo
+        └── partner-art-sucre.png   # Partenaire Art Sucré
+```
 
 ---
 
 ## Lancer en local
 
-### Avec Python (frontend uniquement)
+Frontend uniquement :
 
 ```bash
 python3 -m http.server 3000
 # → http://localhost:3000
 ```
 
-### Avec Vercel CLI (frontend + API)
-
-```bash
-npm install
-npm install -g vercel
-vercel dev
-# → http://localhost:3000
-```
+> Le backend PHP ne peut pas tourner via cette commande. Pour tester le formulaire en local, utiliser MAMP ou XAMPP. En pratique, le plus simple est de tester directement en production sur OVH.
 
 ---
 
-## Variables d'environnement
+## Configuration PHP
 
-Copier `.env.example` en `.env` et renseigner les clés :
+Copier `api/config.example.php` en `api/config.php` et renseigner les clés :
 
 ```bash
-cp .env.example .env
+cp api/config.example.php api/config.php
 ```
 
-| Variable | Description | Où l'obtenir |
-|----------|-------------|--------------|
-| `RESEND_API_KEY` | Clé API Resend | [resend.com](https://resend.com) |
-| `ADMIN_EMAIL` | Email qui reçoit les inscriptions | — |
-| `EMAIL_DOMAIN` | Domaine expéditeur vérifié | Dashboard Resend |
-| `TURNSTILE_SECRET_KEY` | Clé secrète Cloudflare Turnstile | [dash.cloudflare.com](https://dash.cloudflare.com) |
-| `ALLOWED_ORIGIN` | Domaine autorisé pour CORS | Ton domaine en prod |
+| Constante | Description | Où l'obtenir |
+|-----------|-------------|--------------|
+| `BPC_RESEND_API_KEY` | Clé API Resend | [resend.com](https://resend.com) → API Keys |
+| `BPC_ADMIN_EMAIL` | Email qui reçoit les inscriptions | — |
+| `BPC_EMAIL_DOMAIN` | Domaine expéditeur vérifié | Dashboard Resend |
+| `BPC_TURNSTILE_SECRET` | Clé secrète Cloudflare Turnstile | [dash.cloudflare.com](https://dash.cloudflare.com) → Turnstile |
+| `BPC_ALLOWED_ORIGIN` | Domaine autorisé pour CORS | Ton domaine OVH en prod |
 
 > Les clés de test Cloudflare Turnstile sont pré-remplies pour le développement local.
 
+> ⚠️ `api/config.php` est dans `.gitignore` — ne jamais le commit. Le déposer manuellement sur OVH via FTP.
+
 ---
 
-## Déploiement sur Vercel
+## Déploiement sur OVH
 
-```bash
-vercel --prod
-```
+1. **Configurer** `api/config.php` avec tes vraies clés (cf. section ci-dessus)
+2. **Uploader tous les fichiers** via FTP (FileZilla, Cyberduck, ou le gestionnaire de fichiers OVH)
+3. **Déposer `api/config.php` manuellement** via FTP — ne pas passer par git
+4. **Vérifier le domaine** dans Resend (Dashboard Resend → Domains) pour pouvoir envoyer depuis `noreply@tondomaine.fr`
 
-Puis ajouter les variables d'environnement dans le dashboard Vercel :
-**Settings → Environment Variables**
+### Accès FTP OVH
+Les identifiants FTP sont disponibles dans l'espace client OVH :  
+**Hébergements → ton hébergement → FTP-SSH**
 
 ---
 
@@ -103,50 +133,11 @@ Puis ajouter les variables d'environnement dans le dashboard Vercel :
 ## Configurer le CAPTCHA en production
 
 1. Créer un site sur [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile)
-2. Remplacer la **Site Key** dans `index.html` :
+2. Remplacer la **Site Key** dans `index.html` et les pages formules :
    ```html
    data-sitekey="TA_VRAIE_SITE_KEY"
    ```
-3. Ajouter la **Secret Key** dans les variables d'environnement Vercel
-
----
-
-## Branches git
-
-| Branche | Description |
-|---------|-------------|
-| `main` | V1 initiale — mockup de base |
-| `v2-concept` | V2 active — contenu réel, 2 fondateurs, 3 formules, partenaires |
-
-## Structure des fichiers
-
-```
-basketballplayercamp_website/
-├── index.html              # Page principale
-├── css/
-│   └── style.css           # Styles (dark theme, responsive)
-├── js/
-│   └── main.js             # Interactions, formulaire, mode démo
-├── api/
-│   └── register.js         # Serverless function (Vercel)
-├── images/
-│   ├── hero.jpg            # Photo hero
-│   ├── about.jpg           # Section about
-│   ├── coach.jpg           # Hugo Bequignon
-│   ├── pierre-augustin.jpg # Pierre Augustin (B&W via CSS)
-│   ├── gallery-*.jpg       # Galerie (6 photos)
-│   └── logo/
-│       ├── LogoCouleurBasket.jpg   # Logo principal (nav + favicon)
-│       ├── partner-jt-immo.jpeg    # Partenaire JT Immo
-│       └── partner-art-sucre.png   # Partenaire Art Sucré
-├── Dockerfile              # Image nginx:alpine
-├── docker-compose.yml      # Dev local Docker
-├── nginx.conf              # Config nginx
-├── vercel.json             # Config Vercel
-├── package.json            # Dépendances (resend)
-├── .env.example            # Template variables d'environnement
-└── .gitignore
-```
+3. Mettre la **Secret Key** dans `api/config.php` → `BPC_TURNSTILE_SECRET`
 
 ---
 
@@ -159,15 +150,6 @@ http://localhost:3000?demo
 ```
 
 Utile pour enregistrer une vidéo de présentation avec QuickTime (`⌘ Shift 5`).
-
----
-
-## Visualisation gratuite via GitHub Pages
-
-Activer dans **Settings → Pages → sélectionner la branche `v2-concept`**.  
-URL générée : `https://noon28.github.io/basketballplayercamp_website/`
-
-> ⚠️ GitHub Pages = frontend uniquement. Le formulaire d'inscription nécessite Vercel (`vercel --prod`).
 
 ---
 
