@@ -735,6 +735,24 @@ ul { list-style: none; }
   filter: none;
   transform: scale(1.05);
 }
+/* Slot conservant les couleurs du logo (ex: Art Sucré) */
+.partner-slot--color img {
+  filter: none;
+}
+.partner-slot--color:hover img {
+  filter: none;
+  transform: scale(1.05);
+}
+.partner-slot__label {
+  font-size: 0.68rem;
+  color: var(--orange);
+  text-align: center;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 6px;
+}
 .partner-slot__placeholder {
   font-size: 0.75rem;
   color: var(--grey);
@@ -758,6 +776,201 @@ ul { list-style: none; }
 }
 @media (max-width: 640px) {
   .partners__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===================================================
+   VENUE — SALLE PASTEUR
+   =================================================== */
+.venue {
+  padding: 100px 0;
+  background: var(--dark-2);
+}
+.venue__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.venue__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,107,0,0.12);
+  border: 1px solid rgba(255,107,0,0.25);
+  color: var(--orange);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.venue__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+.venue__desc {
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.venue__desc strong { color: var(--white); }
+.venue__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.venue__stat {
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 18px 12px;
+  text-align: center;
+}
+.venue__stat-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  display: block;
+  margin-bottom: 6px;
+}
+.venue__stat-label {
+  font-size: 0.75rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.venue__map-card {
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.venue__map-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.venue__map-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,107,0,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.venue__map-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.venue__map-address {
+  font-size: 0.82rem;
+  color: var(--grey);
+  margin-top: 2px;
+}
+.venue__map-embed {
+  width: 100%;
+  height: 240px;
+  border: none;
+  display: block;
+  filter: grayscale(0.3) contrast(1.05);
+}
+.venue__courts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.venue__court-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--grey-light);
+}
+.venue__court-item::before {
+  content: '✓';
+  color: var(--orange);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.venue__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.venue__photo-main,
+.venue__photo-secondary {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--dark-3);
+}
+.venue__photo-main { grid-column: 1 / -1; }
+.venue__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.venue__photo-main .venue__photo-img { height: 260px; }
+.venue__photo-secondary .venue__photo-img { height: 160px; }
+.venue__photo-main:hover .venue__photo-img,
+.venue__photo-secondary:hover .venue__photo-img { transform: scale(1.04); }
+.venue__photo-label {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+.venue__map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange);
+  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  transition: opacity var(--transition);
+}
+.venue__map-link:hover { opacity: 0.75; }
+
+@media (max-width: 1024px) {
+  .venue__inner { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 640px) {
+  .venue__stats { grid-template-columns: 1fr 1fr; }
+  .venue__photos { grid-template-columns: 1fr; }
+  .venue__photo-main { grid-column: unset; }
 }
 
 /* ===================================================
@@ -1062,6 +1275,8 @@ img {
 .gallery__item,
 .about__img-wrap,
 .coach__visual,
+.venue__photo-main,
+.venue__photo-secondary,
 .nav__logo,
 a img {
   pointer-events: auto;
