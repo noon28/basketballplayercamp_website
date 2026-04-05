@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfectionnement Tir — BasketBall Player Camp</title>
+  <link rel="icon" type="image/jpeg" href="images/logo/LogoCouleurBasket.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/formules.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Cloudflare Turnstile CAPTCHA -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo/LogoCouleurBasket.jpg" alt="Basketball Player Camp" class="nav__logo-img" />
+        <span class="nav__logo-text">BBALL PLAYER</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">Le Camp</a></li>
+        <li><a href="index.html#features">Formules</a></li>
+        <li><a href="index.html#team">Équipe</a></li>
+        <li><a href="index.html#gallery">Photos</a></li>
+        <li><a href="index.html#instagram">Instagram</a></li>
+        <li><a href="index.html#register" class="nav__cta">Réserver</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="formule-hero">
+    <div class="formule-hero__bg">
+      <img src="images/gallery-5.jpg" alt="Perfectionnement tir basketball" class="formule-hero__bg-img" />
+      <div class="formule-hero__bg-overlay" style="background: linear-gradient(135deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.4) 100%);"></div>
+    </div>
+    <div class="container">
+      <div class="formule-hero__content">
+        <a href="index.html#features" class="formule-hero__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Toutes les formules
+        </a>
+        <div class="formule-hero__tag formule-hero__tag--soon">🎯 Prochainement</div>
+        <h1 class="formule-hero__title" style="color: var(--grey-light);">
+          Perfectionnement<br />
+          <span style="color: var(--grey);">Tir</span>
+        </h1>
+        <p class="formule-hero__subtitle" style="color: var(--grey);">
+          Des sessions dédiées exclusivement à la mécanique de tir — machine à shoot professionnelle,
+          analyse vidéo et travail individualisé. Bientôt disponible.
+        </p>
+        <div class="formule-hero__meta">
+          <div class="meta-badge" style="opacity:0.5;"><span>🤖</span> <div><strong>Machine à shoot</strong></div></div>
+          <div class="meta-badge" style="opacity:0.5;"><span>🎥</span> <div><strong>Analyse vidéo</strong></div></div>
+          <div class="meta-badge" style="opacity:0.5;"><span>👤</span> <div><strong>Travail individuel</strong></div></div>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#waitlist" class="btn btn--ghost">Être notifié au lancement</a>
+          <a href="index.html#features" class="btn btn--ghost" style="border-color:rgba(255,255,255,0.1); color: var(--grey);">Voir les autres formules</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON DETAILS -->
+  <section class="formule-section formule-section--dark">
+    <div class="container">
+      <div class="coming-soon">
+        <div>
+          <span class="coming-soon__icon">🎯</span>
+          <div class="coming-soon__badge">En cours de développement</div>
+          <h2 class="coming-soon__title">
+            Une formule<br />
+            <span class="text--accent">100% tir</span>
+          </h2>
+          <p class="coming-soon__desc">
+            Le perfectionnement tir est une formule entièrement dédiée à la mécanique du shoot.
+            Machine à shoot professionnelle, analyse vidéo frame par frame et protocoles d'entraînement
+            issus du monde professionnel. On construit quelque chose de solide — ça viendra quand ce sera prêt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUI EST PRÉVU -->
+  <section class="formule-section formule-section--darker">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Ce qui arrive</p>
+        <h2 class="section__title">Ce qu'on <span class="text--accent">prépare</span></h2>
+      </div>
+      <div class="inclus-grid">
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">🤖</div>
+          <div class="inclus-card__title">Machine à shoot pro</div>
+          <div class="inclus-card__desc">Une machine à shoot professionnelle pour multiplier les répétitions et automatiser la mécanique sans dépendre d'un rebondeur.</div>
+        </div>
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">🎥</div>
+          <div class="inclus-card__title">Analyse vidéo</div>
+          <div class="inclus-card__desc">Chaque joueur sera filmé et son shoot analysé image par image. Identification précise des défauts techniques et plan de correction personnalisé.</div>
+        </div>
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">📐</div>
+          <div class="inclus-card__title">Biomécanique du tir</div>
+          <div class="inclus-card__desc">Travail sur la posture, l'angle de release, le suivi de la main et la cohérence de la mécanique. Une approche scientifique du shoot.</div>
+        </div>
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">👤</div>
+          <div class="inclus-card__title">Sessions ultra-individualisées</div>
+          <div class="inclus-card__desc">Format ultra-petits groupes, voire 1-on-1, pour un coaching entièrement centré sur le développement spécifique de chaque joueur.</div>
+        </div>
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">📊</div>
+          <div class="inclus-card__title">Statistiques de shooting</div>
+          <div class="inclus-card__desc">Suivi des pourcentages par zone, tracking de la progression session après session pour mesurer concrètement les améliorations.</div>
+        </div>
+        <div class="inclus-card" style="opacity:1; transform:none; border-style: dashed; border-color: rgba(255,255,255,0.1);">
+          <div class="inclus-card__icon">🧠</div>
+          <div class="inclus-card__title">Mental du shooteur</div>
+          <div class="inclus-card__desc">Au-delà de la technique, travailler la confiance, la routine de shoot et la capacité à maintenir un bon pourcentage sous pression compétitive.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="formule-section" id="waitlist">
+    <div class="container">
+      <div class="register__inner" style="align-items:center;">
+        <div class="register__text">
+          <p class="section__eyebrow">Liste d'attente</p>
+          <h2 class="section__title">Sois le <span class="text--accent">premier informé</span></h2>
+          <p class="register__desc">
+            Laisse-nous ton contact et tu seras parmi les premiers à recevoir toutes les informations
+            au lancement de la formule Perfectionnement Tir.
+          </p>
+          <ul class="register__perks">
+            <li>✓ Accès prioritaire aux inscriptions</li>
+            <li>✓ Tarif Early Bird réservé aux inscrits liste d'attente</li>
+            <li>✓ Aucun engagement — juste une notification</li>
+          </ul>
+        </div>
+        <form class="register__form" id="waitlistForm">
+          <div class="form__group">
+            <label for="name">Prénom &amp; Nom</label>
+            <input type="text" id="name" name="name" placeholder="Jordan Martin" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jordan@email.com" required />
+          </div>
+          <div class="form__group">
+            <label for="age">Âge</label>
+            <input type="number" id="age" name="age" placeholder="16" min="10" max="30" required />
+          </div>
+          <div class="form__group">
+            <label for="level">Niveau actuel</label>
+            <select id="level" name="level">
+              <option value="">Sélectionner...</option>
+              <option>Débutant</option>
+              <option>Intermédiaire</option>
+              <option>Compétition</option>
+              <option>Semi-pro</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="message">Quoi améliorer dans ton tir ? (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Ex: Mon suivi de main, ma cohérence, ma mécanique sous pression..."></textarea>
+          </div>
+          <input type="hidden" name="formula" value="Perfectionnement tir (liste d'attente)" />
+          <!-- Cloudflare Turnstile -->
+          <div class="cf-turnstile"
+               data-sitekey="1x00000000000000000000AA"
+               data-theme="dark"
+               data-language="fr"></div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            M'inscrire sur la liste d'attente 🎯
+          </button>
+          <div class="form__feedback" id="formFeedback" aria-live="polite"></div>
+          <p class="form__note">Pas de spam. On te contacte uniquement au lancement de la formule.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <img src="images/logo/LogoCouleurBasket.jpg" alt="Basketball Player Camp" class="nav__logo-img" />
+            <span class="nav__logo-text">BBALL PLAYER</span>
+          </a>
+          <p>BasketBall Player Camp — Le camp qui change la donne.</p>
+        </div>
+        <div class="footer__links">
+          <a href="index.html#about">Le Camp</a>
+          <a href="index.html#features">Programme</a>
+          <a href="index.html#gallery">Photos</a>
+          <a href="index.html#register">Réserver</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
+          <a href="#" class="social-btn" aria-label="TikTok">TK</a>
+          <a href="#" class="social-btn" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 BasketBall Player Camp. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const revealEls = document.querySelectorAll('.reveal, .inclus-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Handle waitlist form (re-use main form logic)
+    const waitlistForm = document.getElementById('waitlistForm');
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const feedback = document.getElementById('formFeedback');
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours...';
+
+        const data = Object.fromEntries(new FormData(waitlistForm));
+        const token = waitlistForm.querySelector('[name="cf-turnstile-response"]')?.value || '';
+        data['cf-turnstile-response'] = token;
+
+        try {
+          const res = await fetch('/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const json = await res.json();
+          if (json.success) {
+            feedback.className = 'form__feedback form__feedback--success';
+            feedback.textContent = '✅ Inscrit sur la liste d\'attente ! On te contacte au lancement.';
+            waitlistForm.reset();
+          } else {
+            throw new Error(json.error || 'Erreur');
+          }
+        } catch (err) {
+          feedback.className = 'form__feedback form__feedback--error';
+          feedback.textContent = '❌ ' + (err.message || 'Une erreur est survenue. Réessaie.');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'M\'inscrire sur la liste d\'attente 🎯';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage Vacances — BasketBall Player Camp</title>
+  <link rel="icon" type="image/jpeg" href="images/logo/LogoCouleurBasket.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/formules.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="images/logo/LogoCouleurBasket.jpg" alt="Basketball Player Camp" class="nav__logo-img" />
+        <span class="nav__logo-text">BBALL PLAYER</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#about">Le Camp</a></li>
+        <li><a href="index.html#features">Formules</a></li>
+        <li><a href="index.html#team">Équipe</a></li>
+        <li><a href="index.html#gallery">Photos</a></li>
+        <li><a href="index.html#instagram">Instagram</a></li>
+        <li><a href="index.html#register" class="nav__cta">Réserver</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="formule-hero">
+    <div class="formule-hero__bg">
+      <img src="images/gallery-4.jpg" alt="Stage basket vacances" class="formule-hero__bg-img" />
+      <div class="formule-hero__bg-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="formule-hero__content">
+        <a href="index.html#features" class="formule-hero__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Toutes les formules
+        </a>
+        <div class="formule-hero__tag">🏫 Vacances scolaires</div>
+        <h1 class="formule-hero__title">
+          Stage<br />
+          <span class="text--accent">Vacances</span>
+        </h1>
+        <p class="formule-hero__subtitle">
+          Des stages disponibles toute l'année pendant chaque période de vacances scolaires,
+          en partenariat avec le Châteaudun Basket Club.
+        </p>
+        <div class="formule-hero__meta">
+          <div class="meta-badge"><span>📅</span> <div><strong>Toutes les vacances</strong></div></div>
+          <div class="meta-badge"><span>🏟️</span> <div><strong>Infrastructures CBC</strong></div></div>
+          <div class="meta-badge"><span>🎯</span> <div><strong>Tous niveaux</strong></div></div>
+          <div class="meta-badge"><span>🤝</span> <div><strong>Partenariat CBC</strong></div></div>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="index.html#register" class="btn btn--primary">Je réserve ma place</a>
+          <a href="#programme" class="btn btn--ghost">Voir le programme</a>
+        </div>
+      </div>
+    </div>
+    <div class="formule-logo">
+      <img src="images/logo/LogoCouleurBasket.jpg" alt="Basketball Player Camp" class="formule-logo__img" />
+    </div>
+  </section>
+
+  <!-- PARTENARIAT CBC -->
+  <section class="formule-section formule-section--dark">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Notre partenariat</p>
+        <h2 class="section__title">En partenariat avec <span class="text--accent">le CBC</span></h2>
+      </div>
+      <div class="partner-banner reveal">
+        <div class="partner-banner__label">Partenaire officiel</div>
+        <img src="images/logo/LogoCouleurBasket.jpg" alt="CBC Logo" class="partner-banner__logo" />
+        <div>
+          <div class="partner-banner__name">Châteaudun Basket Club</div>
+          <div class="partner-banner__desc">
+            Le CBC met à disposition ses infrastructures et son réseau pour accueillir les stages
+            pendant les vacances scolaires. Une collaboration qui garantit des conditions d'entraînement
+            professionnelles tout au long de l'année.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÉRIODES DISPONIBLES -->
+  <section class="formule-section formule-section--darker" id="programme">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Disponibilité</p>
+        <h2 class="section__title">Toutes les <span class="text--accent">vacances</span></h2>
+      </div>
+      <div class="inclus-grid">
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🍂</div>
+          <div class="inclus-card__title">Vacances de Toussaint</div>
+          <div class="inclus-card__desc">Fin octobre — début novembre. Reprise après la trêve estivale avec un stage qui remet les compteurs à zéro et recharge la motivation.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">❄️</div>
+          <div class="inclus-card__title">Vacances de Noël</div>
+          <div class="inclus-card__desc">Fin décembre — début janvier. Profite de la coupure hivernale pour travailler les fondamentaux et repartir plus fort pour la seconde partie de saison.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🌨️</div>
+          <div class="inclus-card__title">Vacances d'Hiver</div>
+          <div class="inclus-card__desc">Février. La période idéale pour consolider les acquis techniques en milieu de saison et progresser sur les points faibles identifiés.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🌸</div>
+          <div class="inclus-card__title">Vacances de Printemps</div>
+          <div class="inclus-card__desc">Avril. À l'approche des play-offs et fins de saison, prépare ton corps et ton mental pour performer aux moments clés.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME TYPE -->
+  <section class="formule-section">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Contenu</p>
+        <h2 class="section__title">Ce qu'on <span class="text--accent">travaille</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">Jour 1</div>
+          <div class="timeline-body">
+            <div class="timeline-title">Évaluation & Fondamentaux</div>
+            <div class="timeline-desc">Bilan individuel de chaque joueur. Identification des axes de progression. Travail des fondamentaux : posture défensive, dribble de base, mécanique de tir.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">Jour 2–3</div>
+          <div class="timeline-body">
+            <div class="timeline-title">Technique individuelle avancée</div>
+            <div class="timeline-desc">Jeu sans ballon, coupes, picks, pick & roll, finitions variées au panier. Chaque joueur travaille selon son poste et son niveau.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">Jour 4–5</div>
+          <div class="timeline-body">
+            <div class="timeline-title">Jeu collectif & Systèmes</div>
+            <div class="timeline-desc">Introduction aux systèmes offensifs et défensifs. Communication sur le terrain, aide défensive, spacing offensif. 3v3 et 5v5 encadrés.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">Dernier jour</div>
+          <div class="timeline-body">
+            <div class="timeline-title">Tournoi interne & Bilan</div>
+            <div class="timeline-desc">Mise en pratique en situation réelle avec le tournoi inter-groupes. Débriefing collectif et bilan individuel pour chaque participant.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUI EST INCLUS -->
+  <section class="formule-section formule-section--dark">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Ce que tu reçois</p>
+        <h2 class="section__title">Tout est <span class="text--accent">prévu</span></h2>
+      </div>
+      <div class="inclus-grid">
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🏟️</div>
+          <div class="inclus-card__title">Infrastructures CBC</div>
+          <div class="inclus-card__desc">Salles professionnelles du Châteaudun Basket Club, terrains en parquet, équipements de qualité pour s'entraîner dans les meilleures conditions.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🎓</div>
+          <div class="inclus-card__title">Entraîneurs diplômés</div>
+          <div class="inclus-card__desc">Coaches certifiés FFBB qui connaissent les exigences du basket moderne, capables d'adapter le programme à chaque profil de joueur.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🏀</div>
+          <div class="inclus-card__title">Programme adapté</div>
+          <div class="inclus-card__desc">Groupes constitués par niveau (débutant, intermédiaire, compétition) pour que chacun progresse à son rythme, sans jamais se sentir largué ou sous-stimulé.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">👥</div>
+          <div class="inclus-card__title">Petits groupes</div>
+          <div class="inclus-card__desc">Le nombre de participants est limité pour garantir une attention individuelle à chaque joueur et des retours réguliers des entraîneurs.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">📈</div>
+          <div class="inclus-card__title">Suivi de progression</div>
+          <div class="inclus-card__desc">Un bilan de début et de fin de stage pour mesurer concrètement les progrès réalisés pendant la semaine.</div>
+        </div>
+        <div class="inclus-card">
+          <div class="inclus-card__icon">🤝</div>
+          <div class="inclus-card__title">Réseau Basketball Player Camp</div>
+          <div class="inclus-card__desc">En participant au stage vacances, tu intègres la communauté BPC et tu peux continuer avec d'autres formules tout au long de l'année.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="formule-section formule-section--darker">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__eyebrow">Ambiance</p>
+        <h2 class="section__title">Le camp <span class="text--accent">en images</span></h2>
+      </div>
+      <div class="formule-gallery">
+        <div class="formule-gallery__item">
+          <img src="images/gallery-2.jpg" alt="Ballon de basket" />
+        </div>
+        <div class="formule-gallery__item">
+          <img src="images/gallery-3.jpg" alt="Terrain extérieur" />
+        </div>
+        <div class="formule-gallery__item">
+          <img src="images/gallery-5.jpg" alt="Panier de basket" />
+        </div>
+        <div class="formule-gallery__item">
+          <img src="images/gallery-1.jpg" alt="Joueur en dunk" />
+        </div>
+        <div class="formule-gallery__item">
+          <img src="images/gallery-6.jpg" alt="Action de jeu" />
+        </div>
+        <div class="formule-gallery__item">
+          <img src="images/gallery-4.jpg" alt="Arène de basketball" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="formule-cta">
+    <div class="container">
+      <p class="section__eyebrow" style="text-align:center;">Prochaines dates</p>
+      <h2 class="formule-cta__title">Ne laisse pas passer <span class="text--accent">les vacances</span></h2>
+      <p class="formule-cta__sub">
+        Inscris-toi maintenant et reçois toutes les informations sur les prochains stages vacances disponibles.
+      </p>
+      <div class="formule-cta__actions">
+        <a href="index.html#register" class="btn btn--primary">Je m'inscris</a>
+        <a href="index.html#features" class="btn btn--ghost">Voir les autres formules</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <img src="images/logo/LogoCouleurBasket.jpg" alt="Basketball Player Camp" class="nav__logo-img" />
+            <span class="nav__logo-text">BBALL PLAYER</span>
+          </a>
+          <p>BasketBall Player Camp — Le camp qui change la donne.</p>
+        </div>
+        <div class="footer__links">
+          <a href="index.html#about">Le Camp</a>
+          <a href="index.html#features">Programme</a>
+          <a href="index.html#gallery">Photos</a>
+          <a href="index.html#register">Réserver</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
+          <a href="#" class="social-btn" aria-label="TikTok">TK</a>
+          <a href="#" class="social-btn" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 BasketBall Player Camp. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const revealEls = document.querySelectorAll('.reveal, .timeline-item, .inclus-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
