@@ -1,0 +1,16 @@
+# ── Sécurité : bloquer l'accès direct à config.php ──────────────────────────
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "config.example.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# ── Réécriture d'URL : /api/register → /api/register.php ────────────────────
+# Permet au JS d'appeler /api/register sans changer le code frontend
+Options -Indexes
+RewriteEngine On
+RewriteRule ^register$ register.php [L]
