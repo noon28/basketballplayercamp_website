@@ -132,17 +132,13 @@
 }
 
 .formule-logo__img {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(255,107,0,0.4);
-  box-shadow: 0 0 60px rgba(255,107,0,0.2);
-  opacity: 0.85;
-}
-.formule-logo__img--white {
-  background: #fff;
-  padding: 8px;
+  border: 3px solid rgba(255,107,0,0.35);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 60px rgba(255,107,0,0.15);
+  opacity: 1;
 }
 
 /* --- Section spacing --- */
@@ -236,6 +232,16 @@
 .timeline-desc {
   color: var(--grey-light);
   font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.timeline-note {
+  margin-top: 32px;
+  padding: 14px 20px;
+  border-left: 3px solid rgba(255,107,0,0.4);
+  color: var(--grey);
+  font-size: 0.9rem;
+  font-style: italic;
   line-height: 1.6;
 }
 
