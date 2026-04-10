@@ -18,7 +18,9 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">
-        <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="nav__logo-img" />
+        <span class="nav__logo-img-wrap">
+          <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="nav__logo-img" />
+        </span>
         <span class="nav__logo-text">BBALL PLAYER</span>
       </a>
       <ul class="nav__links">
@@ -51,7 +53,7 @@
         DE JEU.
       </h1>
       <p class="hero__subtitle">
-        Entraînements intensifs, coaching d'un joueur Élite 2 &amp; dotation Nike professionnelle.
+        Entraînements comme un professionnel, coaching d'un joueur Élite 2 &amp; dotation Nike professionnelle.
         Vis le basket comme un pro, encadré par des entraîneurs diplômés.
       </p>
       <div class="hero__actions">
@@ -94,9 +96,7 @@
         <div class="about__visual">
           <div class="about__img-wrap">
             <img src="images/about.jpg" alt="Ballons de basket Spalding" class="about__img" />
-            <div class="about__badge">
-              <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="about__badge-logo" />
-            </div>
+            <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="about__badge-logo" />
           </div>
         </div>
         <div class="about__text">
@@ -136,9 +136,7 @@
         <div class="feature-card feature-card--accent feature-card--tall">
           <div class="feature-card__top">
             <div class="feature-card__icon">
-              <div class="feature-card__logo-circle">
-                <img src="images/logo/camp/Logo summercamp.png" alt="Summer Camp" />
-              </div>
+              <img class="feature-card__logo-img" src="images/logo/camp/Logo summercamp.png" alt="Summer Camp" />
             </div>
             <div class="feature-card__tag">Stage d'été</div>
           </div>
@@ -173,9 +171,7 @@
         <div class="feature-card feature-card--tall">
           <div class="feature-card__top">
             <div class="feature-card__icon">
-              <div class="feature-card__logo-circle">
-                <img src="images/logo/camp/LogoSkillsUp.png" alt="Skills Up" />
-              </div>
+              <img class="feature-card__logo-img" src="images/logo/camp/LogoSkillsUp.png" alt="Skills Up" />
             </div>
             <div class="feature-card__tag">Vacances scolaires</div>
           </div>
@@ -197,9 +193,7 @@
         <div class="feature-card feature-card--tall feature-card--soon">
           <div class="feature-card__top">
             <div class="feature-card__icon">
-              <div class="feature-card__logo-circle feature-card__logo-circle--wip">
-                <span class="feature-card__wip-icon">🚧</span>
-              </div>
+              <span class="feature-card__wip-icon">🚧</span>
             </div>
             <div class="feature-card__tag feature-card__tag--soon">En réflexion</div>
           </div>
@@ -449,21 +443,32 @@
       </div>
       <div class="partners__grid">
         <a class="partner-slot partner-slot--white" href="https://www.chateaudun-immo.fr/" target="_blank" rel="noopener">
-          <img src="images/logo/Partenaires/partner-jt-immo.jpeg" alt="JT Immo — Jérome Testault" />
+          <img src="images/logo/Partenaires/partner-jt-immo.PNG" alt="JT Immo — Jérome Testault" />
         </a>
         <a class="partner-slot partner-slot--color" href="https://art-sucre-patisserie.fr/" target="_blank" rel="noopener">
-          <img src="images/logo/Partenaires/partner-art-sucre.png" alt="Art Sucré Pâtisserie" />
+          <img src="images/logo/Partenaires/partner-art-sucre.PNG" alt="Art Sucré Pâtisserie" />
         </a>
-        <!-- Ajoute d'autres partenaires ici -->
-        <div class="partner-slot">
-          <div class="partner-slot__placeholder">Logo partenaire</div>
-        </div>
-        <div class="partner-slot">
-          <div class="partner-slot__placeholder">Logo partenaire</div>
-        </div>
-        <div class="partner-slot">
-          <div class="partner-slot__placeholder">Logo partenaire</div>
-        </div>
+        <a class="partner-slot partner-slot--white" href="https://www.facebook.com/nathetkiki612/?locale=fr_FR" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-civette.PNG" alt="La Civette Châteaudun" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://www.credit-agricole.fr/ca-valdefrance/particulier.html" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-credit-agricole.png" alt="Crédit Agricole Val de France" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://douceescapade.fr/" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-douce-escapade.JPEG" alt="Institut Douce Escapade" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://www.facebook.com/pizzamontebiancochateaudun/?locale=fr_FR" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-montebianco.PNG" alt="Pizza Monte Bianco Châteaudun" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://www.renou-auto.fr/" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-renou.JPEG" alt="Renou Automobiles — Atelier agréé Fiat" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://www.facebook.com/TartinesEtGourmandises/?locale=fr_FR" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/partner-tartine-gourmandise.JPG" alt="La Croquise — Tartines &amp; Gourmandises" />
+        </a>
+        <a class="partner-slot partner-slot--white" href="https://www.anamorphose-architectes.fr/" target="_blank" rel="noopener">
+          <img src="images/logo/Partenaires/patner-rousseau.JPG" alt="Architecture JP.Esnault — G.Rousseau" />
+        </a>
       </div>
       <p class="partners__note">Tu veux devenir partenaire du camp ? <a href="#register">Contacte-nous</a></p>
     </div>
@@ -500,13 +505,13 @@
             <input type="number" id="age" name="age" placeholder="16" min="10" max="30" required />
           </div>
           <div class="form__group">
-            <label for="formula">Formule souhaitée</label>
+            <label for="formula">Information souhaitée</label>
             <select id="formula" name="formula">
               <option value="">Sélectionner...</option>
               <option>Stage d'été — 1 semaine</option>
               <option>Stage d'été — 2 semaines</option>
               <option>Stage vacances scolaires</option>
-              <option>Perfectionnement tir (prochainement)</option>
+              <option>Autres informations / Partenaires</option>
             </select>
           </div>
           <div class="form__group">
@@ -546,7 +551,9 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <a href="#" class="nav__logo">
-            <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="nav__logo-img" />
+            <span class="nav__logo-img-wrap">
+              <img src="images/logo/camp/LogoCouleurBasket.png" alt="Basketball Player Camp" class="nav__logo-img" />
+            </span>
             <span class="nav__logo-text">BBALL PLAYER</span>
           </a>
           <p>BasketBall Player Camp — Le camp qui change la donne.</p>

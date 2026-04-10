@@ -60,9 +60,20 @@ basketballplayercamp_website/
     ├── pierre-augustin.jpg # Pierre Augustin (B&W via CSS)
     ├── gallery-*.jpg       # Galerie (6 photos)
     └── logo/
-        ├── LogoCouleurBasket.jpg   # Logo principal (nav + favicon)
-        ├── partner-jt-immo.jpeg    # Partenaire JT Immo
-        └── partner-art-sucre.png   # Partenaire Art Sucré
+        ├── camp/
+        │   ├── LogoCouleurBasket.png   # Logo principal (nav + favicon)
+        │   ├── Logo summercamp.png     # Logo Summer Camp
+        │   └── LogoSkillsUp.png        # Logo Skills Up
+        └── Partenaires/
+            ├── partner-jt-immo.PNG
+            ├── partner-art-sucre.PNG
+            ├── partner-civette.PNG
+            ├── partner-credit-agricole.png
+            ├── partner-douce-escapade.JPEG
+            ├── partner-montebianco.PNG
+            ├── partner-renou.JPEG
+            ├── partner-tartine-gourmandise.JPG
+            └── patner-rousseau.JPG
 ```
 
 ---
@@ -150,6 +161,16 @@ http://localhost:3000?demo
 ```
 
 Utile pour enregistrer une vidéo de présentation avec QuickTime (`⌘ Shift 5`).
+
+---
+
+## Changelog
+
+### Avril 2026
+- **Logos sans cercle** — Suppression des conteneurs ronds (`border-radius: 50%`, `overflow: hidden`, `transform: scale`) sur les logos des cartes formules (index.html), le badge de la section "À propos", et les pages formules. Les logos s'affichent désormais directement avec `object-fit: contain` et un `drop-shadow` pour les détacher visuellement.
+- **Mise à jour des logos partenaires** — Remplacement des anciens fichiers JPEG par de nouveaux PNG/JPEG de meilleure qualité. Ajout de 7 nouveaux partenaires : La Civette, Crédit Agricole Val de France, Douce Escapade, Pizza Monte Bianco, Renou Automobiles, Tartines & Gourmandises, Rousseau. Suppression du partenariat CBC (Châteaudun Basket).
+- **Renommage "Stage Intensif Été" → "Summer Camp"** — Harmonisation du nom sur toutes les pages et dans le CSS.
+- **Galerie étendue** — Ajout de photos réelles du camp.
 
 ---
 

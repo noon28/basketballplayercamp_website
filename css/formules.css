@@ -125,6 +125,8 @@
   bottom: -20px;
   z-index: 2;
   display: none;
+  width: 220px;
+  height: 220px;
 }
 
 @media (min-width: 900px) {
@@ -132,13 +134,11 @@
 }
 
 .formule-logo__img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255,107,0,0.35);
-  box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 60px rgba(255,107,0,0.15);
-  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.4)) drop-shadow(0 0 40px rgba(255,107,0,0.2));
 }
 
 /* --- Section spacing --- */
