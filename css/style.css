@@ -1489,14 +1489,32 @@ a img {
     flex-direction: column;
     position: fixed;
     top: var(--nav-h);
-    left: 0; right: 0; bottom: 0;
-    background: var(--dark);
+    left: 0; right: 0;
+    height: calc(100dvh - var(--nav-h));
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     align-items: center;
     justify-content: center;
     gap: 32px;
     font-size: 1.5rem;
+    z-index: 99;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  .nav__burger { display: flex; }
+  .nav__burger { display: flex; z-index: 101; position: relative; }
+
+  /* Burger → X animation */
+  .nav__burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav__burger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .nav__burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
   .stats__inner { grid-template-columns: repeat(2, 1fr); }
   .stats__item:nth-child(2) { border-right: none; }
