@@ -105,8 +105,8 @@
           <p class="about__desc">
             Le <strong>BasketBall Player Camp</strong> est né de la rencontre de deux passionnés :
             un entraîneur diplômé et un joueur professionnel d'Élite 2. Ensemble, ils ont créé
-            une association pour offrir aux jeunes basketteurs une expérience unique,
-            encadrée et structurée comme dans le monde professionnel.
+            une association loi 1901 (RNA&nbsp;: W282004788) pour offrir aux jeunes basketteurs
+            une expérience unique, encadrée et structurée comme dans le monde professionnel.
           </p>
           <p class="about__desc">
             L'objectif est simple : te donner accès au même environnement, aux mêmes méthodes
@@ -563,6 +563,7 @@
           <a href="#features">Programme</a>
           <a href="#gallery">Photos</a>
           <a href="#register">Réserver</a>
+          <a href="mentions-legales.html">Mentions légales</a>
         </div>
         <div class="footer__social">
           <a href="https://www.instagram.com/basketball_player_camp/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
@@ -571,11 +572,42 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 BasketBall Player Camp. Tous droits réservés.</p>
+        <p>© 2026 BASKETBALL PLAYER CAMP — Association loi 1901 — RNA : W282004788 — <a href="mentions-legales.html" class="footer__legal-link">Mentions légales</a></p>
       </div>
     </div>
   </footer>
 
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Gestion des cookies">
+    <div class="cookie-banner__inner">
+      <p class="cookie-banner__text">
+        Ce site utilise uniquement des cookies fonctionnels nécessaires à son bon fonctionnement (protection CAPTCHA via Cloudflare). Aucun cookie publicitaire n'est déposé.
+        <a href="mentions-legales.html#cookies">En savoir plus</a>
+      </p>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--refuse" id="cookieRefuse">Refuser</button>
+        <button class="cookie-btn cookie-btn--accept" id="cookieAccept">Accepter</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var consent = localStorage.getItem('bpc_cookie_consent');
+      if (!consent) {
+        var banner = document.getElementById('cookieBanner');
+        setTimeout(function () { banner.classList.add('visible'); }, 800);
+        document.getElementById('cookieAccept').addEventListener('click', function () {
+          localStorage.setItem('bpc_cookie_consent', 'accepted');
+          banner.classList.remove('visible');
+        });
+        document.getElementById('cookieRefuse').addEventListener('click', function () {
+          localStorage.setItem('bpc_cookie_consent', 'refused');
+          banner.classList.remove('visible');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
